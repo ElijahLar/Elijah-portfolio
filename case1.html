@@ -10,8 +10,7 @@
 </head>
 
 <body>
-
-    <!-- HEADER -->
+    
     <header class="header">
         <div class="logo">
             <img src="loggos.png" alt="Logo" height="100px" width="100px">
@@ -23,7 +22,6 @@
         </nav>
     </header>
 
-    <!-- MAIN CONTENT -->
     <main class="container">
         <section class="intro">
             <h1>Coffee Machine UI Wireframes – A UX Case Study</h1>
@@ -79,8 +77,6 @@
 
     </main>
 
-
-    <!-- CONTACT SECTION -->
     <footer class="contact">
         <h2>Contact</h2>
         <p>I'm looking for new opportunities. Let's connect!</p>
@@ -90,15 +86,12 @@
 
     </footer>
 
-    <!-- LIGHTBOX (Hidden by Default) -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="close">&times;</span>
         <img id="lightbox-img">
     </div>
 
-    <!-- ✅ LIGHTBOX & NAVBAR SCROLL SCRIPT -->
     <script>
-        // Lightbox Functionality
         function openLightbox(imgElement) {
             const lightbox = document.getElementById("lightbox");
             const lightboxImg = document.getElementById("lightbox-img");
@@ -111,7 +104,6 @@
             document.getElementById("lightbox").style.display = "none";
         }
 
-        // Navbar Scroll Behavior
         document.addEventListener("DOMContentLoaded", function () {
             const header = document.querySelector(".header");
             let scrolling;
