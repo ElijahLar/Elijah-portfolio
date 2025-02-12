@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Coffee Machine UI</title>
+    <link rel="stylesheet" href="Casestyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <img src="loggos.png" alt="Logo" height="100px" width="100px">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        <section class="intro">
+            <h1>Coffee Machine UI Wireframes – A UX Case Study</h1>
+            <hr>
+            <p><b>Overview</b><br>
+                This project focuses on designing an intuitive UI for a coffee machine. It explores various interaction
+                approaches, balancing clarity, minimalism, and visual feedback.
+            </p>
+            <img src="yest3.png" alt="Whole redesign" onclick="openLightbox(this)">
+        </section>
+
+        <section class="sketches">
+            <h2>Sketch Concepts & Interaction Approaches</h2>
+            <p>
+                Different interaction designs emerge in our sketches:
+            <ul>
+                <li><b>Sketch 1:</b> Features a well-defined button for direct user engagement.</li>
+                <li><b>Sketch 2:</b> Takes a minimalist approach, removing defined buttons while maintaining usability.
+                </li>
+                <li><b>Sketch 3:</b> Relies on user familiarity, greeting users instead of using traditional UI
+                    elements.</li>
+            </ul>
+            </p>
+            <img src="yest2.png" alt="Sketch Details" onclick="openLightbox(this)">
+            <img src="yest1.png" alt="Sketch Details" onclick="openLightbox(this)">
+        </section>
+
+        <section class="interaction-principles">
+            <h2>Interaction Design Principles</h2>
+            <p>
+                <b>1. Affordances & Visual Guidance:</b> Clear, highly visible buttons guide users naturally.<br>
+                <b>2. Reducing User Errors & Providing Feedback:</b> A minimalistic UI reduces cognitive load and
+                includes
+                essential actions such as "Go Back" and "Cancel."
+            </p>
+        </section>
+
+        <section class="ui-design">
+            <h2>Software with Style – UI & Visual Design</h2>
+            <p>
+                - <i>Minimalist Design</i>: Focused on reducing noise and prioritizing user choices.<br>
+                - <i>Consistency & Standards</i>: Maintains a uniform layout for seamless interaction.<br>
+                - <i>Typography</i>: Uses <strong>Helvetica Neue</strong> for a modern and readable UI.<br>
+                - <i>Color Palette</i>: Dark, modern tones inspired by coffee for a sleek, professional feel.
+            </p>
+            <img src="case1coff.png" alt="Design System" onclick="openLightbox(this)">
+            <img src="coffe-making-animation-component.png" alt="Coffee UI Animation" onclick="openLightbox(this)">
+        </section>
+
+        <a href="case1.pdf" target="_blank">
+            <p class="pdf"> You can look at the PDF if you want the whole case</p>
+        </a>
+
+    </main>
+
+
+    <!-- CONTACT SECTION -->
+    <footer class="contact">
+        <h2>Contact</h2>
+        <p>I'm looking for new opportunities. Let's connect!</p>
+        <p>Email: <a href="mailto:Elijaholiverlarsson@gmail.com" class="contact-email">Elijaholiverlarsson@gmail.com</a>
+        </p>
+
+
+    </footer>
+
+    <!-- LIGHTBOX (Hidden by Default) -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img id="lightbox-img">
+    </div>
+
+    <!-- ✅ LIGHTBOX & NAVBAR SCROLL SCRIPT -->
+    <script>
+        // Lightbox Functionality
+        function openLightbox(imgElement) {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+
+            lightbox.style.display = "flex";
+            lightboxImg.src = imgElement.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+
+        // Navbar Scroll Behavior
+        document.addEventListener("DOMContentLoaded", function () {
+            const header = document.querySelector(".header");
+            let scrolling;
+
+            window.addEventListener("scroll", () => {
+                clearTimeout(scrolling);
+
+                if (window.scrollY > 50) {
+                    header.classList.add("scrolled");
+                }
+
+                scrolling = setTimeout(() => {
+                    header.classList.remove("scrolled");
+                }, 1500);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

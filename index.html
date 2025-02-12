@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="loggos.png" alt="Logo" height="100px" width="100px">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Intro Section -->
+    <section id="home" class="intro">
+        <h1 class="wave-text">I'm a UI/UX and Interaction Designer.</h1>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const text = document.querySelector(".wave-text");
+                text.innerHTML = text.textContent
+                    .split("")
+                    .map((char, i) => `<span style="--i:${i}">${char === ' ' ? '&nbsp;' : char}</span>`)
+                    .join("");
+            });
+        </script>
+
+
+        <p>Creating meaningful and delightful digital experiences.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I'm an Interaction Design student looking for internships to get real-life experiences. I love working with GUI, User Experience, Webdesign and User Research.
+        </p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="project">
+                <img src="cof.png" alt="Project 1">
+                <h3>Coffee Machine - Done Right</h3>
+                <p>We redesigned and improved our school's coffee machine.</p>
+                <a href="case1.html">
+                    <button class="button">Learn More</button>
+                </a>
+            </div>
+            <div class="project">
+                <img src="yas.png" alt="Project 2">
+                <h3>Restaurant UI Redesigned</h3>
+                <p>A redesigned restaurant self-order UI.</p>
+                <a href="case2.html">
+                    <button class="button">Learn More</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>I'm looking for new opportunities. Let's connect!</p>
+        <p>Email: <a href="mailto:Elijaholiverlarsson@gmail.com" class="contact-email">Elijaholiverlarsson@gmail.com</a>
+        </p>
+    </footer>
+
+    <!-- ✅ FIXED: Move JavaScript to the End -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let lastScrollY = window.scrollY;
+            const header = document.querySelector(".header");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > lastScrollY) {
+                    header.classList.add("scrolled");
+                } else if (window.scrollY === 0) {
+                    header.classList.remove("scrolled");
+                }
+                lastScrollY = window.scrollY;
+            });
+        });
+    </script> /
+
+</body>
+
+</html>
