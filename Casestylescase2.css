@@ -1,4 +1,3 @@
-/* GENERAL STYLES */
 :root {
     --primary-color: #9857D3;
     --background-color: linear-gradient(to right, #11071F, #1A0B2E);
@@ -13,7 +12,6 @@ body {
     scroll-behavior: smooth;
 }
 
-/* ✅ MODERN NAVBAR DESIGN */
 .header {
     position: fixed;
     width: 100%;
@@ -34,7 +32,6 @@ body {
     opacity: 1 !important;
 }
 
-/* 🔍 Lightbox Styles */
 .lightbox {
     display: none;
     position: fixed;
@@ -49,7 +46,6 @@ body {
     z-index: 2000;
 }
 
-/* ✅ FIX: Remove List Dots & Align Buttons */
 .nav {
     display: flex;
     justify-content: center;
@@ -67,7 +63,6 @@ body {
     gap: 20px;
 }
 
-/* ✅ NAVIGATION LINKS */
 .nav a {
     color: white;
     text-decoration: none;
@@ -80,7 +75,6 @@ body {
     position: relative;
 }
 
-/* ✅ Button Hover Effect */
 .nav a::after {
     content: "";
     position: absolute;
@@ -110,8 +104,6 @@ body {
     outline-offset: 3px;
 }
 
-
-/* ✅ FIXED BUTTON POSITIONING */
 .button {
     background-color: transparent;
     color: white;
@@ -137,12 +129,10 @@ button:focus {
     outline-offset: 3px;
 }
 
-/* ✅ FIX: Remove List Dots from Buttons */
 .nav li {
     list-style: none;
 }
 
-/* ✅ RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .nav {
         flex-direction: column;
@@ -155,14 +145,12 @@ button:focus {
     }
 }
 
-/* ✅ PAGE CONTENT SPACING */
 .container {
     max-width: 900px;
     margin: auto;
     text-align: center;
 }
 
-/* ✅ HEADINGS & TEXT IMPROVEMENTS */
 h1,
 h2 {
     text-transform: uppercase;
@@ -176,7 +164,6 @@ p {
     animation: fadeIn 1.2s ease-in-out;
 }
 
-/* ✅ IMAGE STYLING */
 img {
     width: 100%;
     border-radius: 8px;
@@ -189,7 +176,6 @@ img:hover {
     box-shadow: 0px 0px 15px rgba(152, 87, 211, 0.4);
 }
 
-/* ✅ BUTTON STYLING */
 button {
     background-color: transparent;
     color: white;
@@ -209,7 +195,6 @@ button:hover {
     box-shadow: 0px 0px 15px rgba(152, 87, 211, 0.8);
 }
 
-/* ✅ FOOTER */
 .contact {
     text-align: center;
     padding: 50px;
@@ -218,7 +203,6 @@ button:hover {
     box-shadow: 0px -4px 20px rgba(152, 87, 211, 0.3);
 }
 
-/* ✅ RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .nav {
         flex-direction: column;
@@ -234,7 +218,6 @@ button:hover {
     }
 }
 
-/* ✅ ANIMATIONS */
 @keyframes fadeIn {
     from {
         opacity: 0;
