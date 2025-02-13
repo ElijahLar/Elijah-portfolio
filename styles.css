@@ -222,12 +222,13 @@ button:hover {
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
+    /* Hide overflow content */
     width: 100%;
 }
 
 .wave-text span {
     display: inline-block;
-    font-size: 4rem;
+    font-size: 4vw;
     animation: wave 1.5s ease-in-out infinite;
     animation-delay: calc(0.1s * var(--i));
 }
@@ -246,6 +247,8 @@ button:hover {
 
 @media (max-width: 768px) {
     .wave-text span {
-        font-size: 1.2rem;
+        font-size: 23px;
+
+
     }
 }
