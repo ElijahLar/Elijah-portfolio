@@ -221,6 +221,9 @@ button:hover {
 .wave-text {
     display: inline-block;
     white-space: nowrap;
+    overflow: hidden;
+    /* Hide overflow content */
+    width: 100%;
 }
 
 .wave-text span {
@@ -239,5 +242,12 @@ button:hover {
 
     50% {
         transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .wave-text span {
+        font-size: 1.2rem;
+        /* Adjust this value as needed */
     }
 }
